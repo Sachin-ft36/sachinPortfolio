@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const PhoneHome = () => {
   return (
-    <section className="w-full min-h-screen pt-16 pb-12 relative bg-[#0a0a0a] overflow-hidden flex flex-col font-sans selection:bg-gold/30">
+    <section className="w-full max-w-full overflow-x-hidden min-h-screen pt-16 pb-12 relative bg-[#0a0a0a] flex flex-col font-sans selection:bg-gold/30">
       {/* --- BACKGROUND DESIGN --- */}
       <div className="absolute inset-0 z-0">
         {/* Charcoal Gradient Layers */}
@@ -164,9 +164,11 @@ const PhoneHome = () => {
         </div>
       </div>
 
-      {/* LUXURY AMBIENT GLOWS */}
-      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[40%] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-[20%] left-[-10%] w-[40%] h-[30%] bg-white/5 blur-[100px] rounded-full pointer-events-none" />
+      {/* LUXURY AMBIENT GLOWS - Wrapped in overflow-hidden to prevent horizontal scroll */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[40%] bg-gold/5 blur-[120px] rounded-full" />
+        <div className="absolute top-[20%] left-[-10%] w-[40%] h-[30%] bg-white/5 blur-[100px] rounded-full" />
+      </div>
     </section>
   );
 };
