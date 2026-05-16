@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, TrendingUp, Cpu, ArrowRight, Star, ShieldCheck, Briefcase, Globe, Zap, CheckCircle2 } from 'lucide-react';
+import { X, Cpu, ArrowRight, ShieldCheck, Briefcase, Globe, Zap, CheckCircle2 } from 'lucide-react';
 
 interface BusinessPageProps {
   isOpen: boolean;
