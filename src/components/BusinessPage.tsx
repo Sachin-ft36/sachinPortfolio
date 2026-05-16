@@ -19,7 +19,7 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
           {/* 0. NAVIGATION / CLOSE */}
           <div className="fixed top-0 left-0 w-full z-[1100] p-6 md:p-10 flex justify-between items-center pointer-events-none">
             <div className="text-xl font-black tracking-tighter text-white opacity-40">SACHIN<span className="text-gold">.</span>STRATEGIC</div>
-            <button 
+            <button
               onClick={onClose}
               className="p-4 bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/10 backdrop-blur-3xl group pointer-events-auto"
             >
@@ -30,7 +30,7 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
           {/* 1. HERO SECTION - CLEAN & BOLD */}
           <section className="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 px-6">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(212,175,55,0.1)_0%,transparent_70%)] -z-10" />
-            
+
             <div className="container mx-auto max-w-5xl text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -40,8 +40,8 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
                 <Zap size={14} className="text-gold fill-gold" />
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gold">2026 STRATEGIC INTAKE OPEN</span>
               </motion.div>
-              
-              <motion.h1 
+
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -50,8 +50,8 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
                 ELEVATING BUSINESS <br />
                 <span className="text-gold">WITH AGENTIC AI.</span>
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -99,7 +99,7 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
                     feature: "3X Faster Scaling"
                   }
                 ].map((item, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     whileHover={{ y: -10 }}
                     className="p-12 rounded-[3rem] bg-white/[0.02] border border-white/5 hover:border-gold/30 transition-all group"
@@ -122,19 +122,19 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
           {/* 3. PARTNERSHIP INTAKE FORM */}
           <section className="py-40 px-6 relative overflow-hidden">
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/5 blur-[150px] -z-10 rounded-full" />
-            
+
             <div className="container mx-auto max-w-4xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div className="text-center lg:text-left">
                   <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">READY TO <br /> <span className="text-gold">START?</span></h2>
                   <p className="text-white/40 text-lg md:text-xl font-light leading-relaxed mb-10">Limited availability for strategic enterprise partnerships in 2026. Secure your slot now.</p>
-                  
+
                   <div className="space-y-6 flex flex-col items-center lg:items-start">
                     {["Full Project Lifecycle", "AI Audits & Integration", "CTO Advisory"].map((li, idx) => (
-                       <div key={idx} className="flex items-center gap-4">
-                          <ShieldCheck className="text-gold" size={20} />
-                          <span className="text-white/60 font-medium tracking-wide">{li}</span>
-                       </div>
+                      <div key={idx} className="flex items-center gap-4">
+                        <ShieldCheck className="text-gold" size={20} />
+                        <span className="text-white/60 font-medium tracking-wide">{li}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
                   <form className="space-y-8" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="6362d6ca-5e5d-451e-9279-3733d3170b02" />
                     <input type="hidden" name="subject" value="NEW BUSINESS INQUIRY" />
-                    
+
                     <div className="space-y-2">
                       <label className="text-[10px] uppercase font-black tracking-widest text-white/30 ml-4">Full Name</label>
                       <input name="name" type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-3xl px-8 py-5 outline-none focus:border-gold/50 transition-all text-white" required />
@@ -163,7 +163,7 @@ const BusinessPage: React.FC<BusinessPageProps> = ({ isOpen, onClose }) => {
                       </select>
                     </div>
 
-                    <motion.button 
+                    <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
