@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&family=Inter:wght@100;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --gold-light: #F5E6BE;
+    --electric: #007AFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  section {
+    /* Removed redundant scroll-margin to fix double offset issue */
+  }
+
+  body {
+    @apply bg-dark text-white font-sans selection:bg-gold/30 selection:text-white;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-charcoal/40 backdrop-blur-xl border border-white/10;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-br from-gold via-gold-light to-gold-dark bg-clip-text text-transparent;
+  }
+
+  .btn-premium {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-500 hover:scale-105 active:scale-95;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-dark hover:bg-gold-light shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)];
+  }
+
+  .btn-outline {
+    @apply border border-white/20 hover:border-white/40 hover:bg-white/5 backdrop-blur-sm;
+  }
+
+  .card-premium {
+    @apply glass-panel p-8 rounded-3xl transition-all duration-500 hover:border-gold/30;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-24 px-6 md:px-12 lg:px-24;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, background-color 0.3s ease;
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Magnetic Button Container */
+.magnetic-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)];
+  }
+
+  .gold-glow-border {
+    @apply border border-gold/30 shadow-[0_0_20px_rgba(212,175,55,0.15)];
+  }
+
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+  }
+
+  @keyframes shimmer {
+    from { transform: translateX(-200%) skewX(-20deg); }
+    to { transform: translateX(300%) skewX(-20deg); }
+  }
