@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero = ({ onJoinBusiness }: { onJoinBusiness: () => void }) => {
+const Hero = () => {
   return (
     <section className="w-full min-h-screen pt-28 relative">
       <div className="w-full h-full overflow-hidden relative">

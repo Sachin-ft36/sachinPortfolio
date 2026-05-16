@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Bot, Palette, Rocket, Zap, Smartphone } from 'lucide-react';
 

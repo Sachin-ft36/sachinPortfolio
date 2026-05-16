@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Loader = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);

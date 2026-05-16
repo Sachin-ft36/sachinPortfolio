@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -70,10 +70,10 @@ function App() {
           <main className="relative">
             <div id="home">
               <div className="hidden md:block">
-                <Hero onJoinBusiness={() => setIsBusinessPageOpen(true)} />
+                <Hero />
               </div>
               <div className="block md:hidden">
-                <PhoneHome onJoinBusiness={() => setIsBusinessPageOpen(true)} />
+                <PhoneHome />
               </div>
             </div>
           <Projects />

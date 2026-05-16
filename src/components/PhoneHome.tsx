@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const PhoneHome = ({ onJoinBusiness }: { onJoinBusiness: () => void }) => {
+const PhoneHome = () => {
   return (
     <section className="w-full min-h-screen pt-16 pb-12 relative bg-[#0a0a0a] overflow-hidden flex flex-col font-sans selection:bg-gold/30">
       {/* --- BACKGROUND DESIGN --- */}
